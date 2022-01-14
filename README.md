@@ -42,4 +42,4 @@ Learn more about the Serverless Stack.
 ## Community
 
 [Follow us on Twitter](https://twitter.com/ServerlessStack) or [post on our forums](https://discourse.serverless-stack.com).
-# sst-notes
+
