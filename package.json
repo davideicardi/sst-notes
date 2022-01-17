@@ -20,5 +20,8 @@
     "aws-cdk-lib": "2.7.0",
     "aws-sdk": "^2.1057.0",
     "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "amazon-cognito-identity-js": "^5.2.4"
   }
 }

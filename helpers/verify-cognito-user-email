@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+
+read -p 'AWS Region: ' YOUR_REGION
+read -p 'UserPoolId: ' YOUR_USER_POOL_ID
+read -p 'Email: ' YOUR_EMAIL
+
+aws cognito-idp admin-confirm-sign-up \
+  --region "$YOUR_REGION" \
+  --user-pool-id "$YOUR_USER_POOL_ID" \
+  --username "$YOUR_EMAIL"

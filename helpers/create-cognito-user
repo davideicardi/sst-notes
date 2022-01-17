@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -euo pipefail
+
+read -p 'AWS Region: ' YOUR_REGION
+read -p 'UserPoolClientId: ' YOUR_USER_POOL_CLIENT_ID
+read -p 'Email: ' YOUR_EMAIL
+read -sp 'Password: ' YOUR_PASSWORD
+
+aws cognito-idp sign-up \
+  --region "$YOUR_REGION" \
+  --client-id "$YOUR_USER_POOL_CLIENT_ID" \
+  --username "$YOUR_EMAIL" \
+  --password "$YOUR_PASSWORD"

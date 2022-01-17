@@ -32,6 +32,33 @@ Remove all your stacks and all of their resources from AWS. Or optionally remove
 
 Runs your tests using Jest. Takes all the [Jest CLI options](https://jestjs.io/docs/en/cli).
 
+## Helpers
+
+### Create a test user and get credentials for API
+
+We’ll use AWS CLI to sign up a user with their email and password.
+
+```bash
+./helpers/create-cognito-user
+```
+(fill Region and UserPoolClientId with the ones printed by sst outputs)
+
+Confirm user.
+
+```bash
+./helpers/verify-cognito-user-email
+```
+(fill Region and UserPoolId with the ones printed by sst outputs)
+
+Generate credentials for API:
+
+```
+./create-cognito-credentials.js
+```
+(fill all requested parameters)
+
+Postman can be used to generate AWS signature using a specified auth kind passing the output of the above commands.
+
 ## Documentation
 
 Learn more about the Serverless Stack.
